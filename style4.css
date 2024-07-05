@@ -1,0 +1,55 @@
+body
+        {
+            margin: 0px;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .right{
+                width: 40%;
+        }
+        .head{
+            background-color: rgb(0, 164, 164);
+            font-weight: 800;
+            font-size: larger;
+            text-align: center;
+            padding: 10px;
+            
+        }
+        .row{
+            height: 50px;
+            border: 1px;
+        }
+        
+        .row .left{
+            height:100px ;
+            width: 50%;
+            background-color: rgb(4, 201, 201);
+            float: left;
+            font-size: medium;
+            font-weight: 600;
+            text-align: center;
+            padding: 8px; 
+            overflow: auto;
+        }
+        .row .righ{
+            height:100px ;
+            width: 50%;
+            background-color: rgb(4, 201, 201);
+            float: right;
+            text-align: center;
+            padding: 8px;
+            overflow: auto;
+
+        }
+        .bottom{
+            background-color: rgb(71, 198, 220);
+            text-align: center;
+            clear: both;
+            padding: 10px;
+        }
+        .error1,.error2{
+            display: none;
+            color: brown;
+        }
+       

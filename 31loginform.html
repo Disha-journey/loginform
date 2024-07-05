@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style4.css">
+    <script>
+        function login(){
+            error=0;
+            error+=checkEmpty(document.myform.user,"error1");
+            error+=checkEmpty(document.myform.pass,"error2");
+            if(error==0 ){
+                alert("Thank u");
+            } 
+            else{
+                // alert("fill the form");
+                return false;
+            }    
+        }
+        function checkEmpty(z,err){
+            s=1;
+            if(z.value==""){
+                z.style.backgroundColor="red";
+                document.getElementsByClassName(err)[0].style.display="block";
+            }
+            else{
+                z.style.backgroundColor="white";
+                document.getElementsByClassName(err)[0].style.display="none";
+                s=0;
+            }
+            return s;
+        }
+           
+        
+    </script>
+</head>
+<body>
+<form action="myloginform.html" name="myform" onsubmit="return login()">
+    <div class="right">
+        <div class="head">Login Form</div>
+        <div class="row">
+            <div class="left">Enter username:</div>
+            <div class="righ"><input type="text" name="user" id="username" onblur="checkEmpty(this,'error1')" >
+            <h6 class="error1">please fill first name</h6> </div>
+        </div>
+        <div class="row">
+            <div class="left">Enter password:</div>
+            <div class="righ"><input type="password" name="pass" id="pass" onblur="checkEmpty(this,'error2')">
+                <h6 class="error2">please fill last name</h6></div>
+        </div>
+        <div class="bottom"><input type="submit" value="LOGIN" name="click" > 
+            <input type="button" value="Cancel" name="click"></div>
+    </div>
+</form>
+</body>
+</html>
